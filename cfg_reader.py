@@ -1,6 +1,6 @@
 import os
-
-#following was made by AI
+from multiprocessing import Process
+import tkinter as tk
 CONFIG_DIR = "configs"
 
 REQUIRED_CONFIGS = {
@@ -21,4 +21,24 @@ missing = REQUIRED_CONFIGS - existing_files
 if not missing:
     print("Integrity check passed.")
 else:
-    print("Missing configs:", missing)#ai end
+    print("Missing configs:", missing)
+
+
+
+
+
+def loop_a():
+    while 1:
+        app = tk.Tk()
+        
+        
+
+        tk.mainloop()
+
+def loop_b():
+    while 1:
+        print("b")
+
+if __name__ == '__main__':
+    Process(target=loop_a).start()
+    Process(target=loop_b).start()
